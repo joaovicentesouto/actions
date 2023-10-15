@@ -49,7 +49,9 @@ jobs:
         run: |
           previous_tag=$(git describe --abbrev=0 --tags HEAD^)
           commits=$(git log --pretty=format:"%h %s" ${previous_tag}..${{ github.ref }})
-          echo "commits=${commits}" >> $GITHUB_OUTPUT
+          echo "commits<<EOF" >> $GITHUB_OUTPUT
+          echo "${commits}" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
