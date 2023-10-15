@@ -24,8 +24,7 @@ jobs:
         run: |
           cd app
           cargo build --release
-          ls -R
-          zip app.zip app/target/release/app
+          zip app.zip target/release/app
       - uses: actions/upload-artifact@v3
         with:
           name: app.zip
