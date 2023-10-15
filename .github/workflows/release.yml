@@ -9,10 +9,7 @@ name: Create Release
 jobs:
   validation:
     name: Validation
-    runs-on: ubuntu-latest
-    steps:
-      - name: Validation
-        uses: joaovicentesouto/actions/.github/workflows/main.yml@main
+    uses: joaovicentesouto/actions/.github/workflows/main.yml@main
 
   build:
     name: Upload Release Asset
