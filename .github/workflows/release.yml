@@ -36,7 +36,7 @@ jobs:
     needs: build
     steps:
       - name: Git checkout
-        uses: actions/checkout@v2git
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - uses: actions/download-artifact@v3
