@@ -52,6 +52,9 @@ jobs:
             Changes in this Release
             - First Change
             - Second Change
+      - run: |
+          echo "Release created"
+          ls
       - name: Upload Release Asset
         id: upload-release-asset 
         uses: actions/upload-release-asset@v1
